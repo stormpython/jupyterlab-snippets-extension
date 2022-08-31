@@ -3,10 +3,11 @@ import {
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 import { ICommandPalette, MainAreaWidget } from '@jupyterlab/apputils';
-import { CommandPalette, Widget } from '@lumino/widgets';
+import { CommandPalette } from '@lumino/widgets';
 import { LabIcon } from '@jupyterlab/ui-components';
 
 import codeSvg from '../style/code.svg';
+import { SnippetsWidget } from './snippets';
 
 /**
  * Icon displayed to represent the extension
@@ -26,12 +27,14 @@ const extension: JupyterFrontEndPlugin<void> = {
   activate: (app: JupyterFrontEnd, palette: CommandPalette) => {
     console.log('JupyterLab extension jupyterlab-snippets is activated!');
 
-    const content = new Widget();
+    const content = new SnippetsWidget();
+    // const div = document.createElement('div');
+    // content.node.appendChild(div);
 
-    const widget = new MainAreaWidget({ content });
+    const widget = new MainAreaWidget<SnippetsWidget>({ content });
     widget.id = 'snippets-jupyterlab';
     widget.title.icon = codeIcon;
-    widget.title.closable = false;
+    widget.title.closable = true;
 
     // Add an application command
     const command = 'snippets:open';
