@@ -1,3 +1,9 @@
+# Coding Exercise
+
+This is a simple exercise to connect a very simple code snippets extension for JupyterLab. The initial result should resemble the image below. However, this is an open ended exercise, so there are many ways in which this extension can be built out.
+
+![Jupyter Snippets](./jupyter_snippets.png)
+
 # jupyterlab_snippets
 
 [![Github Actions Status](https://github.com/stormpython/jupyterlab-snippets-extension/workflows/Build/badge.svg)](https://github.com/stormpython/jupyterlab-snippets-extension/actions/workflows/build.yml)
