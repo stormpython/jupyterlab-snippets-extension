@@ -4,6 +4,57 @@
     https://jupyterlab.readthedocs.io/en/stable/developer/css.html
 */
 
-.jl-snippets {
+.jl-code-snippets {
     background-color: white;
+    overflow-y: auto;
+    min-width: 350px;
+}
+
+.jl-code-snippets-list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+.jl-code-snippets-item {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 5px;
+}
+
+.jl-code-snippets-item-info-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.jl-code-snippets-divider {
+    border-top: 1px solid #bbb;
+}
+
+.jl-code-snippets-item-language {
+    padding: 5px;
+}
+
+.jl-code-snippets-item-info {
+    padding: 5px;
+}
+
+.jl-code-snippets-item-info-name {
+    color: var(--jp-content-link-color);
+}
+
+.jl-code-snippets-item-info-description {
+    font-size: var(--jp-ui-font-size1);
+    color: var(--jp-ui-font-color2);
+    font-weight: 400;
+}
+
+.jl-code-snippets-item-code {
+    font-family: monospace;
+    margin: 5px;
+    overflow-x: auto;
+    background: #ffeff0;
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
 }
